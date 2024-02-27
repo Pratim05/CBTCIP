@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form action="">
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="text" value="AC" onclick="display.value = '' " class="operator red" readonly>
+                    <input type="text" value="DE" onclick="display.value = display.value.toString().slice(0,-1) " class="operator red" readonly>
+                    <input type="text" value="." onclick="display.value += '.' " class="operator" readonly>
+                    <input type="text" value="/" onclick="display.value += '/' " class="operator" readonly>
+                </div>
+                <div>
+                    <input type="text" value="7" onclick="display.value += '7' " readonly>
+                    <input type="text" value="8" onclick="display.value += '8' " readonly>
+                    <input type="text" value="9" onclick="display.value += '9' " readonly>
+                    <input type="text" value="*" onclick="display.value += '*' " class="operator" readonly>
+                </div> 
+                <div>
+                    <input type="text" value="4" onclick="display.value += '4' " readonly>
+                    <input type="text" value="5" onclick="display.value += '5' " readonly>
+                    <input type="text" value="6" onclick="display.value += '6' " readonly>
+                    <input type="text" value="-" onclick="display.value += '-' " class="operator" readonly>
+                </div>
+                <div>
+                    <input type="text" value="1" onclick="display.value += '1' " readonly>
+                    <input type="text" value="2" onclick="display.value += '2' " readonly>
+                    <input type="text" value="3" onclick="display.value += '3' " readonly>
+                    <input type="text" value="+" onclick="display.value += '+' " class="operator" readonly>
+                </div>
+                <div>
+                    <input type="text" value="00" onclick="display.value += '00' " readonly>
+                    <input type="text" value="0" onclick="display.value += '0' " readonly>
+                    <input type="text" value="=" class="equal operator green" onclick="display.value = eval(display.value)" readonly >
+
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
